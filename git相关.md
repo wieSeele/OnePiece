@@ -6,8 +6,10 @@ Linux: /etc/gitconfig（系统级）; ~/.gitconfig（用户级）; .git/config�
 Windows：\$HOME变量指定目录：C:\Documents and Settings\\$USER\\.gitconfig  
 
 2. 查看配置信息：  
+```
 \$ git config --list  
 \$ git config user.name  
+```
 
 3. 配置用户信息：  
 \$ git config --global user.name "seele"  
