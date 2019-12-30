@@ -1,21 +1,22 @@
 # git和github的相关操作
 
+## 安装配置
 1. git config配置文件  
 Linux: /etc/gitconfig（系统级）; ~/.gitconfig（用户级）; .git/config（项目级）  
-Windows：$HOME变量指定目录：C:\Documents and Settings\$USER\\.gitconfig  
+Windows：\$HOME变量指定目录：C:\Documents and Settings\\$USER\\.gitconfig  
 
-2. 查看配置信息：
-\$ git config --list
-\$ git config user.name
+2. 查看配置信息：  
+\$ git config --list  
+\$ git config user.name  
 
-3. 配置用户信息：
-\$ git config --global user.name "seele"
-\$ git config --global user.email 1421720829@qq.com
-\$ git config --global core.editor vscode
+3. 配置用户信息：  
+\$ git config --global user.name "seele"  
+\$ git config --global user.email 1421720829@qq.com  
+\$ git config --global core.editor vscode  
 
-4. 查看工作区到缓存区的状态
-\$ git status -s
-??（未添加）、A（已添加）、AM（改动未添加）
+4. 查看工作区到缓存区的状态  
+\$ git status -s  
+??（未添加）、A（已添加）、AM（改动未添加）  
 
 ## 基本概念
 - **工作区** ：就是你在电脑里能看到的目录。
@@ -29,24 +30,26 @@ Windows：$HOME变量指定目录：C:\Documents and Settings\$USER\\.gitconfig
 &emsp;&emsp;当执行 "git checkout ." 或者 "git checkout -- <file>" 命令时，会用暂存区全部或指定的文件替换工作区的文件。这个操作很危险，会清除工作区中未添加到暂存区的改动。  
 &emsp;&emsp;当执行 "git checkout HEAD ." 或者 "git checkout HEAD <file>" 命令时，会用 HEAD 指向的 master 分支中的全部或者部分文件替换暂存区和以及工作区中的文件。这个命令也是极具危险性的，因为不但会清除工作区中未提交的改动，也会清除暂存区中未提交的改动。  
 
-1. 创建仓库
-在项目根目录下使用git bash创建，生成.git文件夹：
+## 基本操作
+
+1. 创建仓库  
+在项目根目录下使用git bash创建，生成.git文件夹：  
 \$ git init
 
-2. 克隆项目：
-git clone 时，可以所用不同的协议，包括 ssh, git, https 等，其中最常用的是 ssh，因为速度较快，还可以配置公钥免输入密码。各种写法如下：
-\$ git clone git@github.com:fsliurujie/test.git         --SSH协议
-\$ git clone git://github.com/fsliurujie/test.git          --GIT协议
-\$ git clone https://github.com/fsliurujie/test.git      --HTTPS协议
+2. 克隆项目：  
+git clone 时，可以所用不同的协议，包括 ssh, git, https 等，其中最常用的是 ssh，因为速度较快，还可以配置公钥免输入密码。各种写法如下：  
+\$ git clone git@github.com:fsliurujie/test.git         --SSH协议  
+\$ git clone git://github.com/fsliurujie/test.git          --GIT协议  
+\$ git clone https://github.com/fsliurujie/test.git      --HTTPS协议  
 
-3. 向缓存区添加文件：
-\$ git add *.c
-\$ git add README.md
-\$ git status -s
+3. 向缓存区添加文件：  
+\$ git add *.c  
+\$ git add README.md  
+\$ git status -s  
 
-4. 将缓存区内容提交到仓库中：
-\$ git commit -m README.md
-\$ git commit -a
+4. 将缓存区内容提交到仓库中：  
+\$ git commit -m README.md  
+\$ git commit -a  
 
 
 5. git commit、git push、git pull、 git fetch、git merge 的含义与区别  
@@ -56,8 +59,8 @@ git clone 时，可以所用不同的协议，包括 ssh, git, https 等，其�
 &emsp;git fetch：是从远程获取最新版本到本地，不会自动merge；  
 &emsp;git merge：是用于从指定的commit(s)合并到当前分支，用来合并两个分支；  
 
-6. 查看提交历史
-\$ git log [--oneline, --author, --reverse]
+6. 查看提交历史  
+\$ git log [--oneline, --author, --reverse]  
 
 
 ## 与github链接
