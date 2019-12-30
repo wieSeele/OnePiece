@@ -7,17 +7,21 @@ Windows：\$HOME变量指定目录：C:\Documents and Settings\\$USER\\.gitconfi
 
 2. 查看配置信息：  
 ```
-\$ git config --list  
-\$ git config user.name  
+$ git config --list  
+$ git config user.name  
 ```
 
 3. 配置用户信息：  
-\$ git config --global user.name "seele"  
-\$ git config --global user.email 1421720829@qq.com  
-\$ git config --global core.editor vscode  
+```
+$ git config --global user.name "seele"  
+$ git config --global user.email 1421720829@qq.com  
+$ git config --global core.editor vscode  
+```
 
 4. 查看工作区到缓存区的状态  
-\$ git status -s  
+```
+$ git status -s  
+```
 ??（未添加）、A（已添加）、AM（改动未添加）  
 
 ## 基本概念
@@ -36,23 +40,30 @@ Windows：\$HOME变量指定目录：C:\Documents and Settings\\$USER\\.gitconfi
 
 1. 创建仓库  
 在项目根目录下使用git bash创建，生成.git文件夹：  
-\$ git init
+```
+$ git init
+```
 
 2. 克隆项目：  
 git clone 时，可以所用不同的协议，包括 ssh, git, https 等，其中最常用的是 ssh，因为速度较快，还可以配置公钥免输入密码。各种写法如下：  
-\$ git clone git@github.com:fsliurujie/test.git         --SSH协议  
-\$ git clone git://github.com/fsliurujie/test.git          --GIT协议  
-\$ git clone https://github.com/fsliurujie/test.git      --HTTPS协议  
+```
+$ git clone git@github.com:fsliurujie/test.git         --SSH协议  
+$ git clone git://github.com/fsliurujie/test.git          --GIT协议  
+$ git clone https://github.com/fsliurujie/test.git      --HTTPS协议  
+```
 
 3. 向缓存区添加文件：  
-\$ git add *.c  
-\$ git add README.md  
-\$ git status -s  
+```
+$ git add *.c  
+$ git add README.md  
+$ git status -s  
+```
 
 4. 将缓存区内容提交到仓库中：  
-\$ git commit -m README.md  
-\$ git commit -a  
-
+```
+$ git commit -m README.md  
+$ git commit -a  
+```
 
 5. git commit、git push、git pull、 git fetch、git merge 的含义与区别  
 &emsp;git commit：是将本地修改过的文件提交到本地库中；  
@@ -62,12 +73,15 @@ git clone 时，可以所用不同的协议，包括 ssh, git, https 等，其�
 &emsp;git merge：是用于从指定的commit(s)合并到当前分支，用来合并两个分支；  
 
 6. 查看提交历史  
-\$ git log [--oneline, --author, --reverse]  
-
+```
+$ git log [--oneline, --author, --reverse]  
+```
 
 ## 与github链接
 1. 使用ssh创建和github链接的ssh-key  
-\$ ssh-keygen -t rsa -C "starshadowmj@gmail.com"  
+```
+$ ssh-keygen -t rsa -C "starshadowmj@gmail.com"  
+```
 &emsp; 会生成公开/私有RSA key pair。  
 其中包括：id {\$HOME/.ssh/id_rsa}；public key {\$HOME/.ssh/id_rsa.pub}；fingerprint
 
@@ -76,11 +90,15 @@ git clone 时，可以所用不同的协议，包括 ssh, git, https 等，其�
 选择new SSH key，添加标题和public key
 
 3. 查看是否链接成功
-\$ ssh -T git@github.com
+```
+$ ssh -T git@github.com
 Hi wieSeele! You've successfully authenticated, but GitHub does not provide shell access.
+```
 
 ## 向github推送
 执行 git push origin master 时，它的意思是推送本地的 master 分支到远程 origin，涉及到远程以及分支，当然也得分开写了。  
-\$ git add readme.txt  
-\$ git commit -m "添加到远程"  
-\$ git push orgin master  
+```
+$ git add readme.txt  
+$ git commit -m "添加到远程"  
+$ git push orgin master  
+```
